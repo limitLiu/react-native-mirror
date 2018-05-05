@@ -14,7 +14,7 @@ export default class Test extends React.Component {
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <TouchableOpacity onPress={async () => {
           // this.setState((state) => ({ test: state.test + 1 }));
-          await actions.test.addClick();
+          await actions.app.addClick();
         }}>
           <Text>test view</Text>
           <Text>{`${this.props.counter}`}</Text>
