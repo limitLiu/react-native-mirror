@@ -1,19 +1,26 @@
 import { actions, model } from 'mirrorx';
 import { $getJS, $with, } from '../core/ImmutableHelper'
 import { fromJS } from "immutable";
+import { NativeModules } from 'react-native';
+import { getState } from "../mirror/middleware";
 
 export default model({
   name: 'app',
   initialState: fromJS({ counter: 0, init: 'welcome' }),
   reducers: {
-    add(state) {
-      let counter = $getJS(state, 'counter', 0) + 1;
-      return $with(state).set('counter', counter).toState();
+    add(state, { count }) {
+      return $with(state).set('counter', count).toState();
     }
   },
   effects: {
     async addClick() {
-      actions.app.add();
+      let state = getState();
+      let { RustManage } = NativeModules;
+      if (RustManage) {
+        let val = $getJS(state.app, 'counter', 0);
+        let count = await RustManage.plus(val);
+        actions.app.add({ count });
+      }
     },
   },
 });

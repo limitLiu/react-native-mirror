@@ -22,6 +22,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		17127345209E2DC70054F4AB /* RustManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 17127344209E2DC70054F4AB /* RustManage.m */; };
+		17127348209E3D2B0054F4AB /* abi_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 17127347209E3D2B0054F4AB /* abi_test.c */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -336,6 +338,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Awesome/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Awesome/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		17127343209E2DC70054F4AB /* RustManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RustManage.h; sourceTree = "<group>"; };
+		17127344209E2DC70054F4AB /* RustManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RustManage.m; sourceTree = "<group>"; };
+		17127346209E3D2B0054F4AB /* abi_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = abi_test.h; sourceTree = "<group>"; };
+		17127347209E3D2B0054F4AB /* abi_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = abi_test.c; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Awesome-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Awesome-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Awesome-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -482,6 +488,7 @@
 		13B07FAE1A68108700A75B9A /* Awesome */ = {
 			isa = PBXGroup;
 			children = (
+				1712731D209E2D8D0054F4AB /* Natives */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -514,6 +521,18 @@
 				2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1712731D209E2D8D0054F4AB /* Natives */ = {
+			isa = PBXGroup;
+			children = (
+				17127343209E2DC70054F4AB /* RustManage.h */,
+				17127344209E2DC70054F4AB /* RustManage.m */,
+				17127346209E3D2B0054F4AB /* abi_test.h */,
+				17127347209E3D2B0054F4AB /* abi_test.c */,
+			);
+			name = Natives;
+			path = Awesome/Natives;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -1115,6 +1134,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				17127345209E2DC70054F4AB /* RustManage.m in Sources */,
+				17127348209E3D2B0054F4AB /* abi_test.c in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
