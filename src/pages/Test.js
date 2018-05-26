@@ -7,7 +7,7 @@ import {
 import { actions } from "mirrorx";
 import { connect } from "react-redux";
 
-@connect(state => ({ counter: state.app.get('counter') }))
+@connect(state => ({ counter: state.app.get('counter'), str: state.app.get('rand_str') }))
 export default class Test extends React.Component {
   render() {
     return (
@@ -16,7 +16,7 @@ export default class Test extends React.Component {
           // this.setState((state) => ({ test: state.test + 1 }));
           await actions.app.addClick();
         }}>
-          <Text>test view</Text>
+          <Text>{this.props.str}</Text>
           <Text>{`${this.props.counter}`}</Text>
         </TouchableOpacity>
 

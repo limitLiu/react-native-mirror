@@ -26,17 +26,12 @@ RCT_REMAP_METHOD(plus,
 }
 
 RCT_REMAP_METHOD(test_rust,
-                 to: (NSString *)to
                  reslover:(RCTPromiseResolveBlock)resolve
                  rejecter: (RCTPromiseRejectBlock)reject) {
-  if ([to length] > 0) {
-//    char *result = rust_greeting(to.UTF8String);
-    char *result = rust_rand_str();
-    resolve(@(result));
-    rust_greeting_free(result);
-  } else {
-    reject(@"error", @"str length is 0", nil);
-  }
+  //    char *result = rust_greeting(to.UTF8String);
+  char *result = rust_rand_str();
+  resolve(@(result));
+  rust_greeting_free(result);
 }
 
 @end

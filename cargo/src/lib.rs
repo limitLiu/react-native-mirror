@@ -14,6 +14,7 @@ pub extern fn rust_greeting(to: *const c_char) -> *mut c_char {
     CString::new("Hello ".to_owned() + recipient).unwrap().into_raw()
 }
 
+#[no_mangle]
 pub extern fn rust_rand_str() -> *mut c_char {
     let s: String = thread_rng().gen_ascii_chars().take(8).collect();
     CString::new(s).unwrap().into_raw()
