@@ -24,6 +24,8 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		17127345209E2DC70054F4AB /* RustManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 17127344209E2DC70054F4AB /* RustManage.m */; };
 		17127348209E3D2B0054F4AB /* abi_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 17127347209E3D2B0054F4AB /* abi_test.c */; };
+		17C00B8320B9C10D00B4D4C2 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C00B8220B9C10D00B4D4C2 /* libresolv.tbd */; };
+		17C00B8520B9C1BB00B4D4C2 /* libgreetings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C00B8420B9C1BA00B4D4C2 /* libgreetings.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -342,6 +344,10 @@
 		17127344209E2DC70054F4AB /* RustManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RustManage.m; sourceTree = "<group>"; };
 		17127346209E3D2B0054F4AB /* abi_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = abi_test.h; sourceTree = "<group>"; };
 		17127347209E3D2B0054F4AB /* abi_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = abi_test.c; sourceTree = "<group>"; };
+		17297C6420B9F8B400860A50 /* greetings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = greetings.h; path = ../../../cargo/src/greetings.h; sourceTree = "<group>"; };
+		17C00B8020B9C0EE00B4D4C2 /* libgreetings.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgreetings.a; path = "../../../Documents/Developer/Rust/greetings/cargo/target/x86_64-apple-ios/release/libgreetings.a"; sourceTree = "<group>"; };
+		17C00B8220B9C10D00B4D4C2 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		17C00B8420B9C1BA00B4D4C2 /* libgreetings.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgreetings.a; path = ../cargo/target/universal/release/libgreetings.a; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Awesome-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Awesome-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Awesome-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,6 +370,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C00B8520B9C1BB00B4D4C2 /* libgreetings.a in Frameworks */,
+				17C00B8320B9C10D00B4D4C2 /* libresolv.tbd in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -526,6 +534,7 @@
 		1712731D209E2D8D0054F4AB /* Natives */ = {
 			isa = PBXGroup;
 			children = (
+				17297C6420B9F8B400860A50 /* greetings.h */,
 				17127343209E2DC70054F4AB /* RustManage.h */,
 				17127344209E2DC70054F4AB /* RustManage.m */,
 				17127346209E3D2B0054F4AB /* abi_test.h */,
@@ -538,6 +547,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17C00B8420B9C1BA00B4D4C2 /* libgreetings.a */,
+				17C00B8220B9C10D00B4D4C2 /* libresolv.tbd */,
+				17C00B8020B9C0EE00B4D4C2 /* libgreetings.a */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 			);
 			name = Frameworks;
@@ -710,6 +722,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = G83A8HGB49;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1228,13 +1243,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = G83A8HGB49;
 				INFOPLIST_FILE = Awesome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../cargo/target/universal/release";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = online.xperia.Awesome;
 				PRODUCT_NAME = Awesome;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1245,13 +1263,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G83A8HGB49;
 				INFOPLIST_FILE = Awesome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../cargo/target/universal/release";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = online.xperia.Awesome;
 				PRODUCT_NAME = Awesome;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

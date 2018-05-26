@@ -1,0 +1,13 @@
+[package]
+name = "greetings"
+version = "0.1.0"
+authors = ["limitLiu <747638920@qq.com>"]
+description = "Example static library built for iOS"
+public = false
+
+[dependencies]
+rand = "0.5"
+
+[lib]
+name = "greetings"
+crate-type = ["staticlib", "cdylib"]

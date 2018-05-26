@@ -17,6 +17,7 @@ export default model({
       let state = getState();
       let val = $getJS(state.app, 'counter', 0);
       let count = await RustManage.plus(val);
+      console.log(await RustManage.test_rust("test"));
       actions.app.add({ count });
     },
   },
