@@ -1,7 +1,7 @@
 import { actions, model } from 'mirrorx';
 import { $getJS, $with, } from '../core/ImmutableHelper'
 import { fromJS } from "immutable";
-import { NativeModules } from 'react-native';
+import { RustManage } from '../core/natives';
 import { getState } from "../mirror/middleware";
 
 export default model({
@@ -15,12 +15,9 @@ export default model({
   effects: {
     async addClick() {
       let state = getState();
-      let { RustManage } = NativeModules;
-      if (RustManage) {
-        let val = $getJS(state.app, 'counter', 0);
-        let count = await RustManage.plus(val);
-        actions.app.add({ count });
-      }
+      let val = $getJS(state.app, 'counter', 0);
+      let count = await RustManage.plus(val);
+      actions.app.add({ count });
     },
   },
 });
